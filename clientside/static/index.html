@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Test</title>
+        <script type="text/javascript" src="https://raw.github.com/visionmedia/jade/master/jade.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.ajax({url: "index.jade", success:function(data) {
+                    var fn = jade.compile(data);
+                    var html = fn({});
+                    document.write(html);
+                }});
+            });
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
